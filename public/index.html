@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebLancer Share</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop" aria-hidden="true"></div>
+    <main class="layout">
+      <section class="hero animate-1">
+        <button id="langToggle" class="lang-btn" type="button">RU/EN</button>
+        <div class="hero-header">
+          <div>
+            <p class="eyebrow">WebLancer Share</p>
+            <h1 id="title">Share Files Fast</h1>
+            <p class="hero-text" id="subtitle">Upload, pick mode, copy link.</p>
+          </div>
+        </div>
+        <div class="limits" id="limits"></div>
+      </section>
+
+      <section class="card upload-card animate-2">
+        <h2 id="uploadHeading">Upload</h2>
+        <form id="uploadForm" novalidate>
+          <label class="field">
+            <span class="label" id="filesLabel">Files</span>
+            <input id="files" name="files" type="file" multiple required />
+            <small id="filesHint">Multi-select supported.</small>
+          </label>
+
+          <div class="field">
+            <span class="label" id="modeLabel">Download mode</span>
+            <div class="mode-grid" role="radiogroup" aria-label="Download mode">
+              <label class="mode-pill mode-one">
+                <input type="radio" name="mode" value="one_time" checked />
+                <span id="modeOneTime">One-time</span>
+                <small id="modeOneTimeHint">Delete after 1 download</small>
+              </label>
+              <label class="mode-pill mode-seven">
+                <input type="radio" name="mode" value="seven_days" />
+                <span id="modeSeven">7 days</span>
+                <small id="modeSevenHint">Delete after 7 days</small>
+              </label>
+              <label class="mode-pill mode-hundred">
+                <input type="radio" name="mode" value="hundred_days" />
+                <span id="modeHundred">100 days</span>
+                <small id="modeHundredHint">Delete after 100 days</small>
+              </label>
+            </div>
+          </div>
+
+          <label class="archive-switch">
+            <input id="archive" name="archive" type="checkbox" checked />
+            <span id="archiveSwitch">Auto ZIP selected files</span>
+          </label>
+
+          <button id="uploadButton" type="submit" data-text="uploadButton">Upload</button>
+          <p id="formStatus" class="status" aria-live="polite"></p>
+        </form>
+
+        <div id="result" class="result hidden" aria-live="polite"></div>
+      </section>
+
+      <section class="card shares-card animate-3">
+        <div class="card-header">
+          <h2 id="linksHeading">Links</h2>
+          <button id="refreshShares" type="button" class="ghost" data-text="refreshButton">Refresh</button>
+        </div>
+        <div id="sharesEmpty" class="empty">No active links.</div>
+        <div id="sharesList" class="shares-list"></div>
+      </section>
+    </main>
+
+    <template id="shareItemTemplate">
+      <article class="share-item">
+        <div>
+          <p class="share-title"></p>
+          <p class="share-meta"></p>
+        </div>
+        <div class="share-actions">
+          <button type="button" class="copy-link">Copy</button>
+          <button type="button" class="delete-link danger">Delete</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="i18n.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
