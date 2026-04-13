@@ -1,0 +1,51 @@
+{
+  "f404ffb9-293d-497f-88fa-ae3b2d5ad044": {
+    "id": "f404ffb9-293d-497f-88fa-ae3b2d5ad044",
+    "mode": "seven_days",
+    "createdAt": 1776084137475,
+    "expiresAt": 1776688937475,
+    "downloadCount": 2,
+    "assetType": "archive",
+    "archive": {
+      "originalName": "files-f404ffb9-293d-497f-88fa-ae3b2d5ad044.zip",
+      "relativePath": "storage/archives/f404ffb9-293d-497f-88fa-ae3b2d5ad044.zip",
+      "size": 168743,
+      "mimeType": "application/zip"
+    },
+    "sourceFiles": [
+      {
+        "originalName": "files-60eee843-0fb3-4684-af33-ba705edf21c6.zip",
+        "size": 168476,
+        "mimeType": "application/x-zip-compressed"
+      }
+    ],
+    "lastDownloadedAt": 1776084159502
+  },
+  "8576928c-3c2d-4361-8270-b8ef78b52691": {
+    "id": "8576928c-3c2d-4361-8270-b8ef78b52691",
+    "mode": "seven_days",
+    "createdAt": 1776087177459,
+    "expiresAt": 1776691977459,
+    "downloadCount": 2,
+    "assetType": "archive",
+    "archive": {
+      "originalName": "files-8576928c-3c2d-4361-8270-b8ef78b52691.zip",
+      "relativePath": "storage/archives/8576928c-3c2d-4361-8270-b8ef78b52691.zip",
+      "size": 983031,
+      "mimeType": "application/zip"
+    },
+    "sourceFiles": [
+      {
+        "originalName": "photo_2025-05-27_11-17-49.jpg",
+        "size": 168467,
+        "mimeType": "image/jpeg"
+      },
+      {
+        "originalName": "Gemini_Generated_Image_obh1ooobh1ooobh1 (1).png",
+        "size": 820601,
+        "mimeType": "image/png"
+      }
+    ],
+    "lastDownloadedAt": 1776087187543
+  }
+}
